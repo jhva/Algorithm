@@ -2,7 +2,14 @@ package org.example.Array;
 
 import java.util.Arrays;
 
-public class selectAlgorithm {
+/**
+ *삽입정렬
+ *
+ * 매 회전마다 현재 인덱스의 값이 왼쪽에 존재하는 인덱스 값보다
+ * 작을경우 위치를 바꿔주며 정렬하는 방식
+ */
+
+public class insertSort {
     public static void main(String[] args) {
         int arrayNumber[] = new int[]{2, 10, 6, 15, 3};
 
