@@ -5,14 +5,20 @@ import java.util.Scanner;
 
 import static org.example.search.SeqSearch.seqSearch;
 
+
+/**
+ * 선형 검색 => 순차 검색 이라고 도 불름
+ *직선모양으로 늘어선 배열에서 원하는 키값을 요소가 만날때 까지 맨앞부터
+ * 순서대로 요소를 검색
+ */
 class SeqSearch {
     static int seqSearch(int[] a, int n, int key) {
         int i = 0;
         while (true) {
             if (i == n) {
                 return -1;
-            }
-            if (a[i] == key) {
+        }
+        if (a[i] == key) {
                 return i;
             }
             i++;
