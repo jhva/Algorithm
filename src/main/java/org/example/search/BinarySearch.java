@@ -1,4 +1,4 @@
-package org.example.search;
+package main.java.org.example.search;
 
 
 import java.util.Scanner;
@@ -12,7 +12,8 @@ public class BinarySearch {
 
     static int BinSearch(int[] a, int n, int key) {
         // n = 요소의 개수
-        // 배열 A에서 key 와 같은 요소르ㅜㄹ 검색
+        // 배열7
+        // A에서 key 와 같은 요소르ㅜㄹ 검색
         int pl = 0; //검색 범위의 첫 인덱스
         int pr = n - 1; // 검색 범위에 끝 인덱스
         //4

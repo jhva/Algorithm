@@ -1,4 +1,4 @@
-package org.example.practice;
+package main.java.org.example.practice;
 
 public class maxArrayFor {
     public static void main(String[] args) {

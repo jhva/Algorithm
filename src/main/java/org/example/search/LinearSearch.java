@@ -1,9 +1,9 @@
-package org.example.search;
+package main.java.org.example.search;
 
 
 import java.util.Scanner;
 
-import static org.example.search.SeqSearch.seqSearch;
+import static main.java.org.example.search.SeqSearch.seqSearch;
 
 
 /**

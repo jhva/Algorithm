@@ -1,4 +1,4 @@
-package org.example.search;
+package main.java.org.example.search;
 
 import java.sql.SQLOutput;
 import java.util.Arrays;
