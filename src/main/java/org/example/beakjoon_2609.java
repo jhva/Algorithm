@@ -7,10 +7,11 @@ import java.util.Scanner;
  * <p>
  * 입력 24 18
  * 출력 6 72
+ * 재귀 함수
+ * 유클리드 호제법
  */
 
 public class beakjoon_2609 {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
