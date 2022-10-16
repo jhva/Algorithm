@@ -14,7 +14,7 @@ public class 부녀회장이될테야_2775 {
         int[][] APT = new int[15][15];
 
         for (int i = 0; i < 15; i++) {
-            APT[i][1] = i; // i층 1호
+            APT[i][1] = 1; // i층 1호
             APT[0][i] = i;// 0층 i호
         }
 
