@@ -46,8 +46,7 @@ public class 소수_2581 {
             if (check) {
                 //true면 100 >2 100 = i;
                 if (min > i) min = i;
-                System.out.println(min);
-                System.out.println(i);
+
                 sum += i;
             }
         }
