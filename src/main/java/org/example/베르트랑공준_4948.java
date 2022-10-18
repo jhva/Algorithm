@@ -33,6 +33,8 @@ public class 베르트랑공준_4948 {
         Scanner sc = new Scanner(System.in);
 
         boolean arr[] = new boolean[246913];
+        // 1<=N <= 123,456 이여서 *2
+        //
 
         while (true) {
             int cnt = 0;
@@ -45,11 +47,13 @@ public class 베르트랑공준_4948 {
 
                 for (int i = 2; i <= max; i++) {
                     arr[i] = true;
-                    //처음 모든 array를 true로 해놓음
+                    //처음 모든 array를 true로 2부터 20
+                    //까지 true
                 }
 
                 for (int i = 2; i <= max; i++) {
-                    for (int j = i * 2; j <= max; j = j + i) {
+                    // 2의배수..3의배수.. 2<21  j = i*2 j=j+2
+                    for (int j = i * i; j <= max; j = j + i) {
                         if (arr[j] == true) {
                             arr[j] = false;
                             //배수지움
@@ -57,6 +61,7 @@ public class 베르트랑공준_4948 {
                     }
                 }
                 for (int k = N + 1; k <= max; k++) {
+                    //문제풀이 1<= N <= 123,456 K=N+1 2N
                     if (arr[k] == true) {
                         cnt++;
                     }
