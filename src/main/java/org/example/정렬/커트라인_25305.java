@@ -24,7 +24,7 @@ public class 커트라인_25305 {
         }
         Arrays.sort(arr);
         System.out.println(arr[N - k]);
-        System.out.println(arr[3]);
+
 
     }
 }
