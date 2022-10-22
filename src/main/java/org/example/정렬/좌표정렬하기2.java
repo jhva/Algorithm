@@ -1,10 +1,9 @@
 package org.example.정렬;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class 좌표정렬하기_11650 {
+public class 좌표정렬하기2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -14,8 +13,8 @@ public class 좌표정렬하기_11650 {
         int[][] arr = new int[N][2];
 
         for (int i = 0; i < N; i++) {
-            arr[i][0] = sc.nextInt();
             arr[i][1] = sc.nextInt();
+            arr[i][0] = sc.nextInt();
 
         }
 
@@ -26,8 +25,9 @@ public class 좌표정렬하기_11650 {
                 return x[0] - y[0];
             }
         });
+
         for (int i = 0; i < N; i++) {
-            System.out.println(arr[i][0] + " " + arr[i][1]);
+            System.out.println(arr[i][1] + " " + arr[i][0]);
         }
 
     }
