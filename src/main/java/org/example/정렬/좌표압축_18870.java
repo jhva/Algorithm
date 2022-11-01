@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static javax.swing.text.html.HTML.Attribute.N;
 
 public class 좌표압축_18870 {
     public static void main(String[] args) {
