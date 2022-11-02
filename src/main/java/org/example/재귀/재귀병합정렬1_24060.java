@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+//이건 쌩 답지 ㅠ 보고 했다 ...ㅠ
 
 public class 재귀병합정렬1_24060 {
 
