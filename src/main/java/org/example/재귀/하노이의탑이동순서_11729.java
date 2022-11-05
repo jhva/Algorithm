@@ -18,10 +18,10 @@ public class 하노이의탑이동순서_11729 {
             return;
         }
 
-        move(from, to, use, N - 1); // 마지막에  스타트 1 , 2, 3
+        move(from, to, use, N - 1); //
         sb.append(from + " " + to).append('\n');
         count++;
-        move(use, from, to, N - 1); // 마지막 2,3,1
+        move(use, from, to, N - 1); //
     }
 
     public static void main(String[] args) throws IOException {
