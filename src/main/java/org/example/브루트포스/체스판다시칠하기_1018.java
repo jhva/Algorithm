@@ -1,7 +1,6 @@
 package org.example.브루트포스;
 
 import java.io.*;
-import java.util.Scanner;
 import java.util.*;
 //
 //public class 체스판다시칠하기_1018 {
@@ -45,58 +44,125 @@ import java.util.*;
 //    }
 //}
 
+//public class 체스판다시칠하기_1018 {
+//    public static boolean[][] arr;
+//    public static int min = 64;
+//
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine(), "");
+//
+//
+//        int N = Integer.parseInt(st.nextToken());
+//        int M = Integer.parseInt(st.nextToken());
+//
+//        arr = new boolean[N][M];
+//        //입력
+//        for (int i = 0; i < N; i++) {
+//            String str = br.readLine();
+//            for (int j = 0; j < M; j++) {
+//                if (str.charAt(j) == 'W') {
+//                    arr[i][j] = true; // white 면 true
+//                } else {
+//                    arr[i][j] = false; // black 면 true
+//                }
+//            }
+//        }
+//        int N_row = N - 7;
+//        int M_row = N - 7;
+//
+//        for (int i = 0; i < N_row; i++) {
+//            for (int j = 0; j < M_row; j++) {
+//                find(i, j);
+//            }
+//        }
+//        System.out.println(min);
+//    }
+//
+//    public static void find(int x, int y) {
+//        int end_x = x + 8;
+//        int end_y = y + 8;
+//        int cnt = 0;
+//        boolean TF = arr[x][y];
+//        for (int i = x; i < end_x; i++) {
+//            for (int j = y; j < end_y; j++) {
+//                if (arr[i][j] != TF) {
+//                    cnt++;
+//                }
+//
+//                TF = (!TF);
+//            }
+//            TF = !TF;
+//        }
+//        cnt = Math.min(cnt, 64 - cnt);
+//        min = Math.min(min, cnt);
+//    }
+//}
+
 public class 체스판다시칠하기_1018 {
-    public static boolean[][] arr;
-    public static int min = 64;
+    static int board(char[][] myBoard, int x, int y) {
+        char[][] BBoard = {
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+        };
+        char[][] WBoard = {
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+                {'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
+                {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'},
+        };
+        int countB = 0;
+        int countW = 0;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (BBoard[i][j] != myBoard[x + i][y + j]) {
+                    countB++;
+                }
+                if (WBoard[i][j] != myBoard[x + i][y + j]) {
+                    countW++;
+                }
+            }
+        }
+        return Math.min(countW, countB);
+
+
+    }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), "");
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        arr = new boolean[N][M];
-        //입력
+        char[][] myboard = new char[N][M];
+
         for (int i = 0; i < N; i++) {
-            String str = br.readLine();
+            String s = br.readLine();
             for (int j = 0; j < M; j++) {
-                if (str.charAt(j) == 'W') {
-                    arr[i][j] = true; // white 면 true
-                } else {
-                    arr[i][j] = false; // black 면 true
-                }
+                myboard[i][j] = s.charAt(j);
             }
         }
-        int N_row = N - 7;
-        int M_row = N - 7;
+        int min = board(myboard, 0, 0);
 
-        for (int i = 0; i < N_row; i++) {
-            for (int j = 0; j < M_row; j++) {
-                find(i, j);
+        for (int i = 0; i < N - 8; i++) {
+            for (int j = 0; j < N - 8; j++) {
+                min = min < board(myboard, i, j) ? min : board(myboard, i, j);
             }
         }
         System.out.println(min);
-    }
-
-    public static void find(int x, int y) {
-        int end_x = x + 8;
-        int end_y = y + 8;
-        int cnt = 0;
-        boolean TF = arr[x][y];
-        for (int i = x; i < end_x; i++) {
-            for (int j = y; j < end_y; j++) {
-                if (arr[i][j] != TF) {
-                    cnt++;
-                }
-
-                TF = (!TF);
-            }
-            TF = !TF;
-        }
-        cnt = Math.min(cnt, 64 - cnt);
-        min = Math.min(min, cnt);
     }
 }
 /**
