@@ -42,7 +42,6 @@ public class 카카오코테_아이디추천 {
                 answer.append(ch);
             }
         }
-        System.out.println(answer.toString());
         return answer.toString();
     }
 
