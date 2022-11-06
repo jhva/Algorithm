@@ -9,7 +9,9 @@ public class 분해합_2231 {
         int check = 0;
         for (int i = 0; i < N; i++) {
             int con = i;
+            System.out.println("for문 " + con);
             int sum = con;
+            System.out.println("for문" + sum);
             while (con > 0) {
                 sum = sum + con % 10;
                 System.out.println(sum + "sum");
@@ -17,7 +19,7 @@ public class 분해합_2231 {
                 System.out.println(con + "con");
             }
             if (sum == N) {
-                sum++;
+                check++;
                 System.out.println(i);
                 break;
             }
