@@ -17,6 +17,7 @@ public class 영화감독_1436번 {
                 N--;
             }
         }
+        System.out.println(cnt);
     }
 }
 
