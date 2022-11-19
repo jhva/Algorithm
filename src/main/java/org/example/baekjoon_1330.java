@@ -15,7 +15,7 @@ public class baekjoon_1330 {
 
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
-
+        br.close();
         System.out.println(A > B ? ">" : A == B ? "==" : "<");
 
     }
