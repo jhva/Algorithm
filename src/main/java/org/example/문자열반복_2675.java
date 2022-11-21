@@ -12,6 +12,7 @@ public class 문자열반복_2675 {
             for (int j = 0; j < s.length(); j++) {
                 for (int k = 0; k < a; k++) {
                     System.out.print(s.charAt(j));
+
                 }
             }
             System.out.println();
