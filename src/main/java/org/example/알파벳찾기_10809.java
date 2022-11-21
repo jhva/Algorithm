@@ -24,4 +24,26 @@ public class 알파벳찾기_10809 {
 
     }
 
+    public static class baekjoon_10952 {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            while (true) {
+                int A = sc.nextInt();
+                int B = sc.nextInt();
+                System.out.println(A + B);
+                if(A==0 && B==0) {
+                    sc.close();
+                    break;
+                }
+                System.out.println(A+B);
+            }
+        }
+    }
+
+    public static class 숫자의합_11720 {
+        public static void main(String[] args) {
+
+        }
+    }
 }
