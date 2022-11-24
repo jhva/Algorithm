@@ -6,16 +6,16 @@
   StringTokenizer를 사용함
 
 ```java
- StringTokenizer st = new StringTokenizer(); //객체생성
- StringTokenizer st = new StringTokenizer(분리할문자열, 구분자); //문자열분리
- StringTokenizer st = new StringTokenizer(분리할문자열, 구분자,boolean); // boolean은 구분자로 분리된 문자열을 토큰에 포함시키냐 여부 
+ StringTokenizer st=new StringTokenizer(); //객체생성
+        StringTokenizer st=new StringTokenizer(분리할문자열,구분자); //문자열분리
+        StringTokenizer st=new StringTokenizer(분리할문자열,구분자,boolean); // boolean은 구분자로 분리된 문자열을 토큰에 포함시키냐 여부 
 //default는 false다 
 
 ```
 
 ```java
 
-Scanner 
+Scanner
 //압력받는 값이 있는가 확인하는함수는 
 //hasNext(), hasNextInt()
 ```
@@ -70,4 +70,11 @@ Scanner
 - '마지막 레벨' 을 제외한 모든 노드가 채워져있으면서 모든 노드 (=사실상 마지막 레벨의 노드들)가
   왼쪽부터 채워져있어야함.
 
+# LinkedList
 
+> LinkedList는 ArrayList와 가장 큰 차이점은 '노드' 객체를 이용을 해서 연결한다.
+
+- LinkedList는 배열을 이용하는 것이 아닌 하나의 객체를 두고 그 안에 데이터와 다른 노드를 가리키는 래퍼런스 데이터로
+  구성하여 여러노드를 하나의 체인 처럼 연결하는것
+
+- 하나의 노드 객체에는 저당할 데이터 data 가 변수에 담기고 reference 데이터(참조 데이터) 다음에 연결할 노드를 가리키는 데이터가 담긴다 .
