@@ -11,7 +11,7 @@
 # StringTokenizer
 
 - 문자열을 구분자로 이용하여 분리할때 사용함
-- 만약에 BufferedReader 메서드로 입력을 읽어들이면 라인 단위로 읽어들일수박에없다
+- 만약에 BufferedReader 메서드로 입력을 읽어들이면 라인 단위로 읽어들일수에없다
 - 꼭 BufferedReader 가 아니더라도 스페이스 기준으로 또는 컴마,공백 을 기준으로 문자열들을 분리해줄수있고 특정 문자에 따라 문자열을 나누고싶을때
   StringTokenizer를 사용함
 
