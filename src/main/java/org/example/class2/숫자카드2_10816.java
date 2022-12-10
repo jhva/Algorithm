@@ -63,7 +63,6 @@ public class 숫자카드2_10816 {
              */
 
             hashMap.put(key, hashMap.getOrDefault(key, 0) + 1);
-            System.out.println(hashMap);
         }
 
         int M = Integer.parseInt(br.readLine());
