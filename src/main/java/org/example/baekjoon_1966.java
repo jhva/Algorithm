@@ -46,11 +46,14 @@ public class baekjoon_1966 {
                     }
                 }
 
-                //다음반복문
+                //다음반복문넘어가기야지
                 if (check == false) {
                     continue;
                 }
 
+
+
+                //front 원소가 가장큰 원소일때 ++ ;
                 count++;
 
 
