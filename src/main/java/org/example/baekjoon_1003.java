@@ -33,6 +33,7 @@ public class baekjoon_1003 {
             dp[n][1] = fibo(n - 1)[1] + fibo(n - 2)[1];
         }
         //N0 N1 담고있는 [n]을 반환
+        
         return dp[n];
     }
 
