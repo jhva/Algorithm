@@ -37,7 +37,7 @@ public class 블랙잭 {
             resultList[i] = sc.nextInt();
             //각값 받기
         }
-
+        System.out.println(Arrays.toString(resultList));
         int result = brouteSearch(resultList, N, M);
 
 
