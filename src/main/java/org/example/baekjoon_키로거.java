@@ -30,10 +30,12 @@ public class baekjoon_키로거 {
         for (int i = 0; i < pwd.length(); i++) {
             switch (pwd.charAt(i)) {
                 case '<':
-                    if (!prevStack.isEmpty()) nextStack.push(prevStack.pop());
+                    if (!prevStack.isEmpty()) {
+                        nextStack.push(prevStack.pop());
+                    }
                     break;
                 case '>':
-                    if (!prevStack.isEmpty()) {
+                    if (!nextStack.isEmpty()) {
                         prevStack.push(nextStack.pop());
                     }
                     break;
