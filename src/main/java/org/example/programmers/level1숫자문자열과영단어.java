@@ -1,4 +1,4 @@
-package main.java.org.example.programers;
+package org.example.programmers;
 
 public class level1숫자문자열과영단어 {
 
