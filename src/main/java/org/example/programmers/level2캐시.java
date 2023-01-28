@@ -3,6 +3,7 @@ package org.example.programmers;
 import java.util.*;
 
 class Solution {
+
     public int solution(int cacheSize, String[] cities) {
         ArrayList<String> cache = new ArrayList<>();
 

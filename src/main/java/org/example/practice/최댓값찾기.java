@@ -1,5 +1,7 @@
 package org.example.practice;
 
+import java.util.Arrays;
+
 public class 최댓값찾기 {
     public static void main(String[] args) {
         int[] intArray = {72, 54, 13, 25, 77, 34};
