@@ -11,6 +11,7 @@ public class level1자릿수더하기 {
 
     static void solve(int num) {
         String str= String.valueOf(num);
+
         int [] arr = Stream.of(str.split("")).mapToInt(Integer::parseInt).toArray();
         System.out.println((Arrays.stream(arr).sum()));
 
