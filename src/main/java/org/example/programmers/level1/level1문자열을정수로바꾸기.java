@@ -6,6 +6,7 @@ public class level1문자열을정수로바꾸기 {
     }
 
     static void solve(String s) {
+        int ans=Integer.valueOf(s);
 
         int answer = Integer.parseInt(s.substring(0, s.length()));
         System.out.println(answer);
