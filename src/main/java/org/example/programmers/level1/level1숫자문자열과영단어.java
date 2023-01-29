@@ -1,4 +1,4 @@
-package org.example.programmers;
+package org.example.programmers.level1;
 
 public class level1숫자문자열과영단어 {
 

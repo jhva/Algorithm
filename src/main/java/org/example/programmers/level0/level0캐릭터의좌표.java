@@ -1,4 +1,4 @@
-package org.example.programmers;
+package org.example.programmers.level0;
 
 public class level0캐릭터의좌표 {
 //        public int[] solution(String[] keyinput, int[] board) {

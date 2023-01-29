@@ -1,4 +1,4 @@
-package org.example.programmers;
+package org.example.programmers.level2;
 
 import java.util.*;
 
