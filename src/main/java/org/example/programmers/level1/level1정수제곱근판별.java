@@ -27,5 +27,4 @@ public class level1정수제곱근판별 {
         return answer;
     }
 
-    ;
 }
