@@ -25,7 +25,6 @@ public class level1두정수사이의합 {
 
         if (a < b) {
             while (a++ < b) {
-
                 answer += a;
             }
         } else {
@@ -34,8 +33,5 @@ public class level1두정수사이의합 {
             }
         }
         return answer;
-
-
     }
-
 }
