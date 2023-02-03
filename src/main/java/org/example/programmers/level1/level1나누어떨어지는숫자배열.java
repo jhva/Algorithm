@@ -36,19 +36,28 @@ public class level1나누어떨어지는숫자배열 {
         int[] answer = new int[cnt];
         cnt = 0;
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i]%divisor == 0){
-                answer[cnt]=arr[i];
+            if (arr[i] % divisor == 0) {
+                answer[cnt] = arr[i];
                 cnt++;
             }
         }
 
         Arrays.sort(answer);
 
-        if(answer.length == 0){
+        if (answer.length == 0) {
             answer = new int[1];
             answer[0] = -1;
         }
         System.out.println(Arrays.toString(answer));
+
         return answer;
     }
 }
+
+/*
+    좋은 답안 ?
+   int[] answer = Arrays.stream(arr).filter(factor -> factor % divisor == 0).toArray();
+          if(answer.length == 0) answer = new int[] {-1};
+          java.util.Arrays.sort(answer);
+          return answer;
+ */
