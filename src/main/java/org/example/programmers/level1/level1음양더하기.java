@@ -39,13 +39,12 @@ public class level1음양더하기 {
 
     }
 
-    static void solve(int[] absolutes, boolean[] signs) {
+    static int solve(int[] absolutes, boolean[] signs) {
 
 
         List<Integer> list = new ArrayList<>();
         int value = 0;
         for (int i = 0; i < absolutes.length; i++) {
-            int index = 0;
             if (!signs[i]) {
                 list.add(-absolutes[i]);
             } else {
@@ -53,8 +52,8 @@ public class level1음양더하기 {
             }
             value += list.get(i);
         }
-        return value;
         System.out.println(value);
+        return value;
     }
 }
 
