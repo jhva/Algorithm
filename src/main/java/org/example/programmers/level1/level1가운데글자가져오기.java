@@ -24,7 +24,6 @@ public class level1가운데글자가져오기 {
 
         for (int i = 0; i < strArr.length; i++) {
             int index = strArr.length / 2;
-
             if (strArr.length % 2 == 0) {
                 answer = strArr[index - 1] + strArr[index];
             } else {
