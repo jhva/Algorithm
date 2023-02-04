@@ -27,7 +27,7 @@ public class level1최대공약수와최소공배수 {
             return a;
         }
         /*
-        test
+        tes
         2개의 자연수 a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a>b)
          a와 b의 최대공약수는 b와 r의 최대공약수와 같고
          b를 r로 나눈 나머지 r'를 구하고 다
