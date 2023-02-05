@@ -33,6 +33,7 @@ public class level1최대공약수와최소공배수 {
          b를 r로 나눈 나머지 r'를 구하고 다
         시 r을 r로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때
         나누는 수가 a와 b의 최대공약수이다
+        재ㅜ기로 b를 다시받아야해서 b, b자리에 a%b는 나머지는 r로 계속 구하는과정을 반복해야하기때문에
          */
         System.out.println(a);
         System.out.println(b);

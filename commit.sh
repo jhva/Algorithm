@@ -3,7 +3,7 @@
 message=""
 
 if [ "$1" = "" ]
-then message="commit message 아 귀찮아"
+then message="commit message 도 필요없다 귀찮아 "
 else message=$1
 fi
 
