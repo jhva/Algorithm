@@ -47,6 +47,7 @@ public class level1삼총사 {
     static void solve(int[] arr) {
 // -2 -1
         int answer = 0;
+        System.out.println(arr[arr.length-2]);
         for (int i = 0; i < arr.length - 2; i++) {
             for (int j = i + 1; j < arr.length - 1; j++) {
                 for (int k = j + 1; k < arr.length; k++) {
