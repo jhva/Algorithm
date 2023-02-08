@@ -59,7 +59,7 @@ public class level1비밀지도 {
             String value = Integer.toBinaryString(arr1[index]);
             String value2 = Integer.toBinaryString(arr2[index]);
             while (value.length() < n) {
-                value = "0" + value;
+                value = "0" + value; //자릿수 때매 자꾸 오류남 ;;;
             }
             while (value2.length() < n) {
                 value2 = "0" + value2;
