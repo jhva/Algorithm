@@ -71,7 +71,7 @@ public class level1두개뽑아서더하기 {
         System.out.println(Arrays.toString(answer));
         // 1,1,2,3,4
         //2 3,4,5,
-
-
+//List<Integer>
+//        list.stream().mapToInt(i -> i).toArray(); int 로바꿀때
     }
 }
