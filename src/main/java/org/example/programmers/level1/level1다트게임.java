@@ -28,12 +28,13 @@ public class level1다트게임 {
                 } else {// T일때 세제곱
                     cnt = (int) Math.pow(cnt, 3);
                 }
-                scoreboard[index++] = cnt;
+                scoreboard[index++] = cnt; // 각 제곱만 넣어주기
                 num = "";// 여기까지오면 다음부분을위해 다시 초기화
             } else {
-                if (ch == '#') {
+                if (ch == '#') { // # 일때
                     scoreboard[index - 1] *= -1;
                 }else{
+                    // * 일때
                     scoreboard[index - 1] *= 2;
                     if(index-2>=0){
                         scoreboard[index-2] *= 2;
