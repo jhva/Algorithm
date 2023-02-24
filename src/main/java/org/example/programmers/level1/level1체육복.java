@@ -34,9 +34,10 @@ public class level1체육복 {
             }
         }
 
-//        System.out.println(n-lost.length+cnt);
-        System.out.println(Arrays.toString(lost));
-        System.out.println(Arrays.toString(reverse));
+
+        System.out.println(n-lost.length+cnt);
+//        Sy stem.out.println(Arrays.toString(lost));
+//        System.out.println(Arrays.toString(reverse));
 
     }
 }
