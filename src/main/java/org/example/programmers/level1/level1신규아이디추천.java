@@ -1,8 +1,6 @@
-package org.example.kakao;
+package org.example.programmers.level1;
 
-import java.util.*;
-
-public class 카카오코테_아이디추천 {
+public class level1신규아이디추천 {
     public static void main(String[] args) {
         soulution("...!@BaT#*..y.abcdefghijklm");
 
@@ -32,6 +30,7 @@ public class 카카오코테_아이디추천 {
             }
             ch = Character.toLowerCase(ch);
             answer.append(ch);
+            System.out.println(answer + "잉");
         }
         if (answer.length() >= 16) answer.setLength(15);
         if (answer.length() == 0) answer.append('a');

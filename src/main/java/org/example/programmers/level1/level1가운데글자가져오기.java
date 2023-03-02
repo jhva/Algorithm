@@ -32,4 +32,6 @@ public class level1가운데글자가져오기 {
         }
         System.out.println(answer);
     }
+
+
 }
