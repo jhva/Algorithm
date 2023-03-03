@@ -31,6 +31,7 @@ public class level1햄버거만들기 {
                     stack.pop();
                     stack.pop();
                     stack.pop();
+                    stack.pop();
                 }
             }
         }
