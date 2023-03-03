@@ -18,6 +18,7 @@ public class level1개인정보수집기간 {
         Map<String, Integer> map = new HashMap<>();
         ArrayList<Integer> arr = new ArrayList<>();
         int[] answer = {};
+
         for (String term : terms) {
             map.put(term.split(" ")[0], Integer.valueOf(term.split(" ")[1]));
         }
@@ -38,6 +39,7 @@ public class level1개인정보수집기간 {
 
             if (todayNumber >= sum) {
                 arr.add(i + 1);
+                //i+1을 한이유는 privacies[i]는 i+1번 개인정보의 수집 일자와 약관 종류를 나타냅니다. 이 구문이 있었기때문에
             }
 
         }
@@ -48,6 +50,9 @@ public class level1개인정보수집기간 {
             answer[i] = arr.get(i);
 
         }
+
+        //각 년도월일을 일수로 계산해서 값을 넣어준후 . => privacies랑 해당 년월일을 일수로변경하고 비교하여 작은것들을 arr에 넣어주고
+        // arr에 담은 값들을 배열로 다시 넣은후 반환
         System.out.println(Arrays.toString(answer));
     }
 }
