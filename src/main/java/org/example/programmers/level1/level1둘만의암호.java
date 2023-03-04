@@ -9,7 +9,7 @@ public class level1둘만의암호 {
     }
 
     static void solve(String s, String skip, int index) {
-        char[] str = s.toCharArray();
+
 
         String answer = "";
         for (int i = 0; i < s.length(); i++) {
@@ -26,6 +26,28 @@ public class level1둘만의암호 {
             answer += c;
         }
 
+        /**
+         *
+         * // 내가 원래 풀려던 방법인데 구현이 생각이안났다 ;;
+         *
+         *
+         *        StringBuilder sb = new StringBuilder();
+         *         List<Character> list = new ArrayList<>();
+         *         for(char ch = 'a'; ch<='z';ch++){
+         *             list.add(ch);
+         *         }
+         *
+         *         for(int i=0; i<skip.length();i++){
+         *             Object ob = skip.charAt(i);
+         *             list.remove(ob);
+         *         }
+         *
+         *         for(int i=0; i<s.length();i++){
+         *             Object ob = s.charAt(i);
+         *             int listIndex = (list.indexOf(ob)+index)%list.size();
+         *             sb.append(list.get(listIndex));
+         *         }
+         */
         System.out.println(answer);
 
 
