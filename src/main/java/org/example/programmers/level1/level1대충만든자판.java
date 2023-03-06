@@ -10,7 +10,6 @@ public class level1대충만든자판 {
 
     static void solve(String[] keymap, String[] targets) {
         List<Integer> list = new ArrayList<Integer>();
-        final int NOT_VALID = 1000;
 
 
 
