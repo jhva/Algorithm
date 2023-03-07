@@ -11,43 +11,37 @@ public class level1대충만든자판 {
     static void solve(String[] keymap, String[] targets) {
 
         int[] answer = new int[targets.length];
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        int index = 0;
+        for (String key : keymap) {
+            for (int i = 0; i < key.length(); i++) {
 
+                char ch = key.charAt(i);
 
-        for (int i = 0; i < targets.length; i++) {
-            int sum = 0;
-            for (int j = 0; j < targets[i].length(); j++) {
-                int cnt = press(keymap, targets[i].charAt(j));
-    //글자하나하나씩검사하고
-                if (cnt == -1) {
-                    sum = -1;
-                    break;
-                }
-                sum += cnt;
+                int move = hashMap.getOrDefault(ch, i + 1);
+                hashMap
+                        .put(ch, Math.min(move, i + 1));
             }
-            answer[i] = sum;
         }
+
+        for (String tar : targets) {
+            for (int i = 0; i < tar.length(); i++) {
+                if (!hashMap.containsKey(tar.charAt(i))) {
+                    answer[index] = -1;
+                    break;
+                } else {
+                    answer[index] += hashMap.get(tar.charAt(i));
+                }
+            }
+            index++;
+        }
+
         System.out.println(Arrays.toString(answer));
 
 
     }
 
-    static int press(String[] key, char c) {
-        int min = -1;
-        for (int i = 0; i < key.length; i++) {
-            for (int j = 0; j < key[i].length(); j++) {
-                if (key[i].charAt(j) == c) {
-                    if (min == -1) {
-                        min = j+1;
-                    } else if (min > j) {
-                        min = j+1;
-                    }
-                    break;
-                }
-            }
-        }
 
-        return min;
-    }
 }
 
 /**
