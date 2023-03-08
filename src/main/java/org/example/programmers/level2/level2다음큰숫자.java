@@ -14,35 +14,42 @@ public class level2다음큰숫자 {
         if (n == 1000001) {
             System.out.println("-1");
         }
-        int only = n; //n을 넣어놓자
+        int prevNum = n; //n을 넣어놓자
         boolean flang = true;
         int cnt = 0; //1 갯수  4
 
         while (flang) {
             String temp = String.valueOf(Integer.toBinaryString(n));
-            int temp2 = 0;
+            /**
+             * 한 이유 제한이 백만이기때문에 백만일때 ?
+             * 개수를 세어버리면 시간초과가 날거같아서 애초에 스트링으로 받고
+             * 해주었다. 해결~
+             *
+             *
+             */
+            int nextStrCnt = 0;
             for (int i = 0; i < temp.length(); i++) {
                 char c = temp.charAt(i);
 
                 if (c == '1') {
-                    temp2++;
+                    cnt++;
                 }
 
             }
-            if (temp2 == cnt) {
-                if (only < n) {
-                    only = n;
+            if (nextStrCnt == cnt) {
+                if (prevNum < n) {
+                    prevNum = n;
                 }
                 flang = false;
                 break;
             }
             if (cnt == 0) {
-                cnt = temp2;
+                cnt = nextStrCnt;
             }
             n++;
 
         }
-        System.out.println(only);
+        System.out.println(prevNum);
 
 
     }
