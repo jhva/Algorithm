@@ -12,6 +12,7 @@ public class level2최솟값만들기 {
         Arrays.sort(b);
         int answer = 0;
 
+        //가장큰값 * 작은값
         for (int i = 0; i < b.length; i++) {
             answer += a[i] * b[b.length - i - 1];
         }
