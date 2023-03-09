@@ -10,6 +10,9 @@ public class 주식가격 {
 
     static void solve(int[] prices) {
         int[] answer = new int[prices.length];
+        //1초시점에서 1은 끝까지 가격이떨어지지않는다. => 리턴값이 4 4라는건 index 기준
+        //3초시점의 3은 1초뒤에 가격이떨어진다 초는 무조건 ms ++ 가되기때문에 1초방어를해주는거를 알수있고
+        // 기준점이 j보다 클경우엔 break;
 
         for (int i = 0; i < prices.length; i++) {
             int ms = 0;
