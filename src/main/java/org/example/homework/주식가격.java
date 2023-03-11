@@ -30,6 +30,7 @@ public class 주식가격 {
             answer[i] = ms;
         }
 
-        System.out.println(Arrays.toString(answer));
     }
 }
+
+

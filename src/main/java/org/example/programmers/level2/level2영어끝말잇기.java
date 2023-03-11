@@ -3,67 +3,123 @@ package org.example.programmers.level2;
 import java.util.*;
 
 public class level2영어끝말잇기 {
+    static List<String> list = new ArrayList<>(); //단어저장
+
     public static void main(String[] args) {
-        solve(2, new String[]{"hello", "one", "even", "never", "now", "world", "draw"});
+        solve(3, new String[]{"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"});
     }
 
     static void solve(int n, String[] words) {
-        int[] arr = new int[words.length];
+
         int[] answer = new int[2];
-        List<String> listStr = new ArrayList<>();
-        Stack<String> stack = new Stack<>();
-        int index = 0;
-        int turnValue = 1;
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i <= n; i++) {
+            map.put(i, 0); //기본 맵 초기화 설정
+        }
         int turn = 1;
 
         for (int i = 0; i < words.length; i++) {
-            if (words[i].length() == 1) {
+            if (i == 0) {//첫번째단어
+                list.add(words[i]);
+                map.put(turn, map.getOrDefault(turn, 0) + 1);
+                turn++;
+                continue;
+            }
+            if (turn > n) {
+                turn = 1;
+            }
+
+            if (!check(words[i], i)) {//단어체크가안되면 넣어준다.
+                map.put(turn, map.getOrDefault(turn, 0) + 1);
+                answer[0] = turn;
+                answer[1] = map.get(turn);
                 break;
+
             }
-//            if (map.size() < 0) {
-//                map.put(words[i], map.getOrDefault(words[i], 0) + 1);
-//            }else{
-//
-//            }
-            stack.push(words[i]);
+            list.add(words[i]);
 
-            if (!stack.isEmpty()) {
-                while (turn < n) {
-                    if (turn < turnValue) {
-                        break;
-                    }
-                    String str = stack.peek();
-                    char stackPeekStart = str.charAt(str.length() - 1);
-                    char stackPeekLast = str.charAt(str.length() - 1);
-
-                    char curStart = words[i].charAt(words[i].length() - 1);
-                    char curLast = words[i].charAt(words[i].length() - 1);
-
-                    if (stackPeekLast == curStart) {
-                        listStr.add(words[i]);
-                        turnValue++;
-                    } else {
-
-                    }
-                    turn++;
-
-                }
-            }
-//            if (!stack.isEmpty() || !listStr.contains(words[i])) {
-//                turnValue = 0;
-//                turn = 0;
-//
-//            }
-
-            answer[0] = turn;
-            answer[1] = turnValue;
+            map.put(turn, map.getOrDefault(turn, 0) + 1);
+            turn++;
 
         }
         System.out.println(Arrays.toString(answer));
-//        System.out.println(map);
+    }
 
+    static boolean check(String s, int index) {
+        //올바른당너ㅐ크
+        char c = list.get(index - 1).charAt(list.get(index - 1).length() - 1);
+
+        if (s.length() <= 1) return false;
+
+
+        if (list.contains(s)) return false;
+
+        //이전 단어 와 마지막단어
+
+        if (c != s.charAt(0)) return false;
+
+        return true;
     }
 }
+
+
+//        int[] arr = new int[words.length];
+//        int[] answer = new int[2];
+//        List<String> listStr = new ArrayList<>();
+//        Stack<String> stack = new Stack<>();
+//        int index = 0;
+//        int turnValue = 1;
+//        int turn = 1;
+//
+//        for (int i = 0; i < words.length; i++) {
+//            if (words[i].length() == 1) {
+//                break;
+//            }
+////            if (map.size() < 0) {
+////                map.put(words[i], map.getOrDefault(words[i], 0) + 1);
+////            }else{
+////
+////            }
+//            stack.push(words[i]);
+//            if (listStr.contains(words[i])) {
+//
+//
+//            } else if (!stack.isEmpty()) {
+//                while (turn < n) {
+//                    if (turn < turnValue) {
+//                        break;
+//                    }
+//                    String str = stack.peek();
+//                    char stackPeekStart = str.charAt(str.length() - 1);
+//                    char stackPeekLast = str.charAt(str.length() - 1);
+//
+//                    char curStart = words[i].charAt(words[i].length() - 1);
+//                    char curLast = words[i].charAt(words[i].length() - 1);
+//
+//                    if (stackPeekLast == curStart) {
+//                        listStr.add(words[i]);
+//                        turnValue++;
+//                    } else {
+//
+//                    }
+//                    turn++;
+//
+//                }
+//            }
+////            if (!stack.isEmpty() || !listStr.contains(words[i])) {
+////                turnValue = 0;
+////                turn = 0;
+////
+////            }
+//
+//            answer[0] = turn;
+//            answer[1] = turnValue;
+//
+//        }
+//        System.out.println(Arrays.toString(answer));
+//        System.out.println(map);
 
 
 /**
