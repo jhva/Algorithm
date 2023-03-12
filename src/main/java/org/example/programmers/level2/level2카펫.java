@@ -16,6 +16,7 @@ public class level2카펫 {
 
         for (int i = 3; i < sum; i++) {
             int div = (sum) / i;
+            System.out.println(div);
 
             if (div >= i) {
                 if ((i - 2) * (div - 2) == yellow) {//갈색격자는 테두리를무조건갖고있기때문에
@@ -25,7 +26,8 @@ public class level2카펫 {
                 }
             }
         }
-//Sat Mar 10 12:57:02 2023 +0900
+//::
+
 
     }
 }
