@@ -24,7 +24,6 @@ public class level3순위 {
 //            System.out.println(map.get(i - 1));
             for (int j = 0; j < results[i - 1].length; j++) {
 //                System.out.println(results[i - 1][j]);
-//                list.add(results[i - 1][j]);
                 map.put(i, results[i - 1][j]);
 
 //                if (j == 2) {
