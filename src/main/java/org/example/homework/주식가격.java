@@ -25,7 +25,6 @@ public class 주식가격 {
             }
             /**
              *  5초는 j<prices.length 범위를 넘었기때문에 0
-             *
              */
             answer[i] = ms;
         }
