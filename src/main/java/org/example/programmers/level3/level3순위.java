@@ -58,7 +58,4 @@ public class level3순위 {
 
 
     }
-
-    static void testMethod(Map<Integer, Map<Integer, String>> list) {
-    }
 }
