@@ -13,7 +13,7 @@ public class 리트코드보석과돌 {
     /**
      * 첫번째 문자열인 jewels인 각 문자가 두번째 문자열인 stones 의 몇 개 포함되어 있는지 계산하는 문제
      *
-     * jewels는 중복된 문자는 존재하지 않음
+     * 조건 jewels는 중복된 문자는 존재할수없다
      *
      *
      * l 입력: jewels = "aA", stones = "aAAbbbb"
@@ -23,6 +23,7 @@ public class 리트코드보석과돌 {
      * l 입력: jewels = "z", stones = "ZZ"
      *
      * 출력: 0
+     *
      *
      */
     static void solve(String jewels, String stones) {
@@ -38,7 +39,7 @@ public class 리트코드보석과돌 {
          *
          *  Collection은 List와 Set의 최상위 구현체이기때문에 .
          */
-        System.out.println(setJewels);
+//        System.out.println(setJewels);
 
 
 

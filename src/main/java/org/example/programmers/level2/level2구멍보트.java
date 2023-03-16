@@ -15,13 +15,16 @@ public class level2구멍보트 {
         int index = 0;
         int len = people.length - 1;
         Arrays.sort(people);
-        while (index >= len) {
-            if (people[index] + people[len] == limit) {
-                answer++;
+        while (len >= index) {
+
+            if (people[index] + people[len] <= limit) {
                 index++;
-                len--;
+                answer++;
+            }else{
+                answer++;
             }
 
+            len--;
         }
         System.out.println(answer);
 
