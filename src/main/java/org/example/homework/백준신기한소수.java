@@ -61,6 +61,7 @@ public class 백준신기한소수 {
         //0 과 1은 소수가아니기때문에
         if (n == 0 || n == 1) return false;
         for (int i = 2; i <= Math.sqrt(n); i++) {
+
             /**
              * 18의 예시를 들면
              * 18의 약수는 1 2 3 6 9 18 인데

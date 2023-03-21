@@ -45,7 +45,9 @@ public class level2N개의최소공배수 {
 
     static int gcd(int a, int b) {
         while (b != 0) {
-            int r = a % b; //나머지
+            int r = a % b; //나머지 a와 b의 최대 공약수는 a를 b로 나눈 나머지(r)와 b의 최대공약수와 같다. (a > b)
+
+
             a = b;
             b = r;
         }
