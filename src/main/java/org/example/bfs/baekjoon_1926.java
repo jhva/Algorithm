@@ -13,12 +13,12 @@ public class baekjoon_1926 {
     static int[] dx = {0, 1, 0, -1};
     static int[] dy = {1, 0, -1, 0};
 
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken()); // 6
         M = Integer.parseInt(st.nextToken()); // 5
-
         map = new int[N][M]; // 6 5
         visit = new int[N][M]; //
 

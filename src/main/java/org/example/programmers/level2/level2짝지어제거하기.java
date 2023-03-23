@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class level2짝지어제거하기 {
     public static void main(String[] args) {
-        solve("abcda");
+        solve("baabaa");
     }
 
     static void solve(String s) {
@@ -27,7 +27,6 @@ public class level2짝지어제거하기 {
         Stack<Character> stack = new Stack<>();
         int answer = 0;
         int cnt = 0;
-
         for (int i = 0; i < s.length(); i++) {
             if (stack.isEmpty()) {
                 stack.push(s.charAt(i));

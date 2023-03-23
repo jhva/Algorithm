@@ -18,7 +18,7 @@ public class 소수찾기 {
 
         // 모든 조합의 숫자만들기
         recursive("", numbers);// 첫번째 매개변수는 여태까지 조합한 숫자를 만들려고
-
+        System.out.println(set);
         for (Integer it : set)
             if (isPrime(it))
                 answer++;
@@ -38,14 +38,20 @@ public class 소수찾기 {
     }
 
     private static void recursive(String s, String n) {
-        if (!s.equals("")) //2 .
+        if (!s.equals("")) { //2 .{
+            System.out.println(Integer.parseInt(s));
             set.add(Integer.valueOf(s));//현재까지만들어진 조합을 set에 넣어주기
+        }
 
         for (int i = 0; i < n.length(); i++) {
-            // 리컬시브라는메서드에서 하고자하는것은  여태까지만들어진 첫번째매개변수에 더해서 그다음 리컬시브로 넘어가게
+            System.out.println("================================================================");
+            System.out.println(s + n.charAt(i));
+            System.out.println("========================n========================================");
+            System.out.println(n.substring(0, i));
             recursive(s + n.charAt(i), n.substring(0, i) + n.substring(i + 1)); // 1. 조합을만들기위ㅣ해 포문을돌린다
-            // 1, 7
-            //17  ""
+            //for문에서 의 재귀 i=0 시작할때의 재귀 는 두번이호출됨 .
+            // i=1일때 재귀도 두번이호출됨
+            //잊지말것.
 
         }
 
