@@ -31,8 +31,8 @@ public class level2방문길이 {
                 continue;
 
             if (check[nx + 5][ny + 5][x + 5][y + 5] != 1) {
-                check[nx + 5][ny + 5][x + 5][y + 5] = 1;
-                check[x + 5][y + 5][nx + 5][ny + 5] = 1;
+                check[nx + 5][ny + 5][x + 5][y + 5] = 1; // 이게 현재 x y좌표 1 로 표시 후
+                check[x + 5][y + 5][nx + 5][ny + 5] = 1; // 기존 좌표배열도 xy좌표도 1로 해준다
                 answer++;
             }
             x = nx;
