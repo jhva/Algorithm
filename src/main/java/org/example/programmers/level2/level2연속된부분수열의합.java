@@ -15,17 +15,14 @@ public class level2연속된부분수열의합 {
         int left = 0, right = 0;
         int sum = 0;
         int len = Integer.MAX_VALUE;
-        int flag = 0;
 
         while (true) {
             if (sum >= k) {
                 sum -= sequence[left++];
-                flag = 0;
             } else if (right >= n)
                 break;
             else if (sum < k) {
                 sum += sequence[right++];
-                flag = 1;
             }
 
             if (sum == k) {
