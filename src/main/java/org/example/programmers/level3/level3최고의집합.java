@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class level3최고의집합 {
     public static void main(String[] args) {
-        solve(2, 9);
+        solve(3, 10);
     }
 
     static void solve(int n, int s) {
