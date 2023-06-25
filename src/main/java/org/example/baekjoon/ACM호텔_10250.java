@@ -23,9 +23,8 @@ public class ACM호텔_10250 {
 
             int N = Integer.parseInt(st.nextToken());
 
-
             //YXX YXXX 경우이기때문에
-//
+            //
             int floor = N % h == 0 ? h * 100 : N % h * 100; //층
 
             /*
@@ -41,6 +40,5 @@ public class ACM호텔_10250 {
 
     }
 }
-
 
 //출력 N번째 손님에게 배정되어야 하는 방 번호를 출력한다.
