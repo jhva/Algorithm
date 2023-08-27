@@ -1,3 +1,5 @@
+package org.example.hacker.easy;
+
 import java.util.List;
 
 public class CompareTheTriplets {
