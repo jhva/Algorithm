@@ -12,7 +12,7 @@ public class BetweenTwoSets {
         int ans = 0;
 
         int lcmValue = calculateLCM(a);
-
+        ArrayList<Integer> list = new ArrayList<>();
         int gcdValue = calculateGCD(b);
         System.out.println(lcmValue);
 
