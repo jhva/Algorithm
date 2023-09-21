@@ -46,4 +46,17 @@ public class MigratoryBirds {
         }
         System.out.println(ans);
     }
+
+    // int[] count = new int[5];
+    //     for (int i = 0; i < n; i++) {
+    //     count[list.get(i-1)]++;
+    // }
+    // int max = count[0];
+    // int type = 1;
+    //     for (int i = 1; i < 5; i++) {
+    //     if (count[i] > max) {
+    //         max = count[i];
+    //         type = i + 1;
+    //     }
+    // }
 }
