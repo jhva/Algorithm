@@ -12,10 +12,14 @@ public class Picking_numbers {
             arr[n]++;
         }
         int sum = 0;
+
         for (int i = 0; i < arr.length - 1; i++) {
             sum = Math.max(sum, arr[i] + arr[i + 1]);
         }
         System.out.println(ans = sum);
-
+        // 인덱스를 생각하며 풀었던거같다
+        // 4 =1
+        //6 =1
+        //5= 1 , 3= 2 , 1=1
     }
 }
