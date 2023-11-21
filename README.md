@@ -1,10 +1,12 @@
-# Linked List 
-> 데이터 ㄹ와 link 로 구성된 노드의 개념을 이용해서 데이터를 저장하는 선형 자료구조 
+# Linked List
+
+> 데이터 와 link 로 구성된 노드의 개념을 이용해서 데이터를 저장하는 선형 자료구조
+
 - 노드를 물리적으로 연속해서 저장하지 않고 link를 이용해서 다음 데이터를 가리키는 형태로 데이터를 저장하는 방식
 
 # Double Linked List
-> Link 가 2개로 Binary Tree 구현에 이용
 
+> Link 가 2개로 Binary Tree 구현에 이용
 
 # [자료구조] 덱
 
@@ -33,8 +35,8 @@
 
 ```java
  StringTokenizer st=new StringTokenizer(); //객체생성
-        StringTokenizer st=new StringTokenizer(분리할문자열,구분자); //문자열분리
-        StringTokenizer st=new StringTokenizer(분리할문자열,구분자,boolean); // boolean은 구분자로 분리된 문자열을 토큰에 포함시키냐 여부 
+    StringTokenizer st=new StringTokenizer(분리할문자열,구분자); //문자열분리
+    StringTokenizer st=new StringTokenizer(분리할문자열,구분자,boolean); // boolean은 구분자로 분리된 문자열을 토큰에 포함시키냐 여부 
 //default는 false다 
 
 ```
