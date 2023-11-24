@@ -80,5 +80,4 @@ public class baekjoon_10026 {
             }
         }
     }
-
 }
